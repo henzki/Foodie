@@ -9,14 +9,18 @@ Foodie App stores different foods with a few properties.
 - A category, for example: soup, dinner etc.
 - A cuisine, for example: italian, japanese etc.
 
-Front page:
+## Front page:
+
 <img src="assets/recipes.png" alt="Front page" width="100%"> 
 
-Details page:
+## Details page:
+
 <img src="assets/recipe-details.png" alt="Details page" width="100%">
 
-Add page:
+## Add page:
+
 <img src="assets/add-recipe.png" alt="Add page" width="100%"> 
 
-Mobile view:
+##Mobile view:
+
 <img src="assets/mobile.JPG" alt="Add recipe page" width="100%"> 
