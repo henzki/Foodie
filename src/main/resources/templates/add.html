@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Add recipe</title>
+	<link rel="shortcut icon" href="/images/ramen.png" />
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<link rel="stylesheet" href="/css/add.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+</head>
+<body>
+	
+	<h3>Add a recipe</h3>
+	
+	<div class="box">
+	
+ 		<form id="form">
+ 		
+ 			<label for="name">Name:</label>
+ 			<input type="text" id="name" name="name" required="required"/>
+ 			
+ 			<label for="time">Time:</label>
+ 			<input type="text" id="time" name="time" required="required"/>
+ 			
+ 			<label for="link">Recipe link:</label>
+ 			<input type="url" id="link" name="link"/>
+ 			
+ 			<div class="image-input">
+ 				<label for="image">Image:
+ 					<br>
+ 					<img src="/images/image-gallery.png" class="image-input-image">
+					<input type="file" name="image" id="image" required="required">
+					<br>
+					<span id="imageName"></span>
+					<br>
+				</label>
+			</div>
+			
+			<label for="category">Category:</label>
+ 			<input type="text" id="category" name="category" required="required"/>
+ 			
+ 			<label for="cuisine">Cuisine:</label>
+ 			<input type="text" id="cuisine" name="cuisine" required="required"/>
+ 			
+ 			<input type="button" id="submit" value="Submit"></input>
+ 		</form>
+ 		
+ 		<div class="go-back">
+			<a href="/"><img src="/images/back-arrow.png" width="30px"></a>
+		</div>
+ 		
+ 		<div class="attribution">
+ 			<a href="https://www.flaticon.com/free-icons/picture" title="picture icons">Picture icons created by Pixel perfect - Flaticon</a>
+ 			<br>
+ 			<a href="https://www.flaticon.com/free-icons/back" title="back icons">Back icons created by Bamicon - Flaticon</a>
+ 			<br><br>
+ 			<a>Photographer: cottonbro from Pexels:</a>
+ 			<br>
+ 			<a href="https://www.pexels.com/fi-fi/kuva/ruoka-ihmiset-illallinen-lounas-3298065/">Food-people-dinner-lunch</a>
+ 		</div>
+ 		
+ 	</div>
+ 		
+ 		<script src="/js/food.js"></script>
+		<script>
+        	let input = document.getElementById("image");
+        	let imageName = document.getElementById("imageName")
+
+        	input.addEventListener("change", ()=>{
+            	let inputImage = document.querySelector("input[type=file]").files[0];
+
+            	imageName.innerText = inputImage.name;
+        })
+    </script>
+</body>
+</html>

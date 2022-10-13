@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Foodie</title>
+	<link rel="shortcut icon" href="/images/ramen.png" />
+	<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1" name="viewport" />
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+</head>
+<body>
+	<section>
+		<h1>Recipes</h1>
+		<div class="add-new">
+			<a th:href="@{/add}"><img src="/images/plus.png" width="30px"></a>
+			<span class="on-hover-text">Add new</span>
+		</div>
+		<div class="curve"></div>
+	</section>
+		
+	<div class="flex-container">	
+			<div th:each = "food : ${foods}">
+				<div class="flex-item">
+					<div class="img_wrp">
+						<a th:href="@{/view(id=${food.id})}"><img th:src="@{${'/food/display/'+ food.id}}"/></a>
+						<a th:href="@{/delete/{id}(id=${food.id})}" class="close">
+							<img src="/images/cross.png" />
+						</a>
+					</div>
+					<div class="flex-name">
+						<a th:href="@{/view(id=${food.id})}" th:text="${food.name}"></a>
+					</div>
+					<div class="flex-time">
+						<img src="/images/time-left.png">
+						<a th:text="${food.time}"></a>
+					</div>
+					<div class="flex-cuisine">
+						<a th:text="${food.cuisine}"></a>
+					</div>
+					
+				</div>	
+			</div>
+	</div>
+	
+	<div class="attribution">
+		<a href="https://www.flaticon.com/free-icons/plus" title="plus icons">Plus icons created by Freepik - Flaticon</a>
+		<br>
+		<a href="https://www.flaticon.com/free-icons/time" title="time icons">Time icons created by Freepik - Flaticon</a>
+	</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>View recipe details</title>
+	<link rel="shortcut icon" href="/images/ramen.png" />
+	<meta charset="utf-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="/css/style.css">
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" >
+	<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+</head>
+<body>
+		
+		<h2 th:text="${name}"></h2>
+			<div class="view-container">
+				<div class="time">
+					<img src="/images/time-left.png">
+					<a th:text="${time}"></a>
+				</div>
+				
+				<div class="side-by-side">
+					<div class="flex-child first">
+						<div class="view-image">
+							<img th:src="@{${'/food/display/'+id}}"> 
+						</div>
+					</div>
+					<div class="flex-child second">
+						<div class="categories">
+							<p>Category:</p>
+							<a th:text="${category}"></a>
+							<p>Cuisine:</p>
+							<a th:text="${cuisine}"></a>
+						</div>
+						<div class="link">
+							<a th:href="${link}" class="underline">Link to recipe</a>
+						</div>
+						
+					</div>
+				</div>
+					<div class="go-back">
+							<a th:href="@{/}"><img src="/images/back-arrow.png" width="30px"></a>
+					</div>
+				
+			</div>
+		
+			<div class="attribution">
+				<a href="https://www.flaticon.com/free-icons/time" title="time icons">Time icons created by Freepik - Flaticon</a>
+				<br>
+ 				<a href="https://www.flaticon.com/free-icons/back" title="back icons">Back icons created by Bamicon - Flaticon</a>
+ 			</div>
+		
+</body>
+</html>
