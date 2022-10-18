@@ -1,6 +1,6 @@
 # Foodie
 
-Foodie App stores different foods with a few properties, like name, link to recipe, and image and so on.
+Foodie App stores different foods with a few properties, like name, link to recipe, an image and so on.
 
 ### Technologies
 
