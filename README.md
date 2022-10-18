@@ -1,13 +1,13 @@
 # Foodie
 
-Foodie App stores different foods with a few properties.
+Foodie App stores different foods with a few properties, like name, link to recipe, and image and so on.
 
-- Name of the dish
-- How long it takes to make
-- A link to the recipe
-- Image of the dish
-- A category, for example: soup, dinner etc.
-- A cuisine, for example: italian, japanese etc.
+### Technologies
+
+- Java Spring Boot
+- HTML
+- CSS
+- MySQL
 
 ## Front page:
 
